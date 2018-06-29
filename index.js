@@ -3,6 +3,16 @@ import PropTypes from "prop-types";
 import ReactDOM from "react-dom";
 import { AppContainer } from "react-hot-loader";
 import Redbox from "redbox-react";
+import { ThemeProvider } from "mineral-ui/themes";
+// import "./index.css";
+// import App from "./App";
+//
+// ReactDOM.render(
+//   <ThemeProvider>
+//     <App />
+//   </ThemeProvider>,
+//   document.getElementById("root")
+// );
 
 import Presentation from "./presentation";
 
@@ -14,16 +24,20 @@ CustomErrorReporter.propTypes = {
 
 ReactDOM.render(
   <AppContainer errorReporter={CustomErrorReporter}>
-    <Presentation />
+    <ThemeProvider>
+      <Presentation />
+    </ThemeProvider>
   </AppContainer>,
   document.getElementById("root"),
 );
 
 if (module.hot) {
   module.hot.accept("./presentation", () => {
-    const NextPresentation = require("./presentation").default;    ReactDOM.render(
+    const NextPresentation = require("./presentation").default; ReactDOM.render(
       <AppContainer errorReporter={CustomErrorReporter}>
-        <NextPresentation />
+        <ThemeProvider>
+          <NextPresentation />
+        </ThemeProvider>
       </AppContainer>,
       document.getElementById("root"),
     );

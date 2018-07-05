@@ -1,0 +1,110 @@
+// JavaScript (ECMAScript)
+// Docs: MDN or devdocs.io
+// Debugging tools: console.log() & debugger
+
+// variables & data types
+const two = 1 + 1
+var number = 2
+number = 5
+const object = {one: 1, two: 2}
+
+// functions
+function add(x, y) {
+  var total = x + y;
+  return total;
+}
+add(2, 3, 4)
+
+// anonymous functions
+var avg = function() {
+  var sum = 0;
+  for (var i = 0, j = arguments.length; i < j; i++) {
+    sum += arguments[i];
+  }
+  return sum / arguments.length;
+};
+
+
+// Simplest form of React:
+ReactDOM.render(
+  <h1>Hello, world!</h1>,
+  document.getElementById('root')
+);
+
+
+// JSX: Rendering logic is inherently coupled with other UI logic
+// React separates concerns with loosely coupled units called “components”
+// JSX is helpful as a visual aid when working with UI inside the JavaScript code
+const element = <h1>Hello, world</h1>; // <-- jsx
+ReactDOM.render(element, document.getElementById('root'));
+
+// You can put any valid JavaScript expression inside the curly braces in JSX
+const name = 'Josh Perez';
+const element = <h1>Hello, {name}</h1>;
+
+
+// JSX represents objects
+// Babel compiles JSX down to React.createElement() calls.
+const element = (
+  <h1 className="greeting">
+    Hello, world!
+  </h1>
+);
+
+              ===
+
+const element = React.createElement(
+  'h1',
+  {className: 'greeting'},
+  'Hello, world!'
+);
+
+// React.createElement() essentially creates an object like:
+const element = {
+  type: 'h1',
+  props: {
+    className: 'greeting',
+    children: 'Hello, world!'
+  }
+};
+
+
+// Functional Components
+function Welcome(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
+
+const element = <Welcome name="Victoria" />;
+ReactDOM.render(
+  element,
+  document.getElementById('root')
+);
+
+
+// Class Components (using ES6)
+class Welcome extends React.Component {
+  render() {
+    return <h1>Hello, {this.props.name}</h1>;
+  }
+}
+
+
+// Composing Components
+function Welcome(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
+
+function App() {
+  return (
+    <div>
+      <Welcome name="Sara" />
+      <Welcome name="Cahal" />
+      <Welcome name="Edite" />
+    </div>
+  );
+}
+
+ReactDOM.render(
+  <App />,
+  document.getElementById('root')
+);

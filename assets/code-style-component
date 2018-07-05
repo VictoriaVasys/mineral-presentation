@@ -1,0 +1,6 @@
+import { createStyledComponent } from 'mineral-ui/styles';
+import Button from 'mineral-ui/Button';
+
+const MyButton = createStyledComponent(Button, {
+  outline: '3px dashed tomato'
+});

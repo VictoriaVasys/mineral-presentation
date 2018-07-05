@@ -1,0 +1,6 @@
+<ThemeProvider>
+  <ThemeProvider theme={{ color_themePrimary: 'darkgray' }}>
+    <nav>Navigation<nav>
+  </ThemeProvider>
+  <main>The main part of your app</main>
+</ThemeProvider>

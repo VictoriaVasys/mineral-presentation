@@ -1,0 +1,5 @@
+import { createThemedComponent } from 'mineral-ui/themes';
+
+const MyButton = createThemedComponent(Button, {
+  Button_backgroundColor: 'tomato'
+});

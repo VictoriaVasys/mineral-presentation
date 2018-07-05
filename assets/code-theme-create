@@ -1,0 +1,38 @@
+import React from 'react';
+import { render } from 'react-dom';
+import Button from 'mineral-ui/Button';
+import { createTheme, ThemeProvider } from 'mineral-ui/themes';
+
+const myAppColor = {
+  [10]: '#faf0f4',
+  [20]: '#fad4e4',
+  [30]: '#fab4d1',
+  [40]: '#f78bb8',
+  [50]: '#ed5393',
+  [60]: '#d6246e',
+  [70]: '#b01355',
+  [80]: '#8a1244',
+  [90]: '#611535',
+  [100]: '#421527'
+}
+
+const myTheme = createTheme({
+  colors: {
+    theme: myAppColor,
+    danger: 'bronze',
+    warning: 'dusk',
+    success: 'teal'
+  }
+});
+
+function App() {
+  return (
+    <ThemeProvider theme={myTheme}>
+      <Button>
+        Hello World
+      </Button>
+    </ThemeProvider>
+  );
+}
+
+render(<App />, document.getElementById('app'));

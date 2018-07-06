@@ -13,16 +13,11 @@ function add(x, y) {
   var total = x + y;
   return total;
 }
-add(2, 3, 4)
-
-// anonymous functions
-var avg = function() {
-  var sum = 0;
-  for (var i = 0, j = arguments.length; i < j; i++) {
-    sum += arguments[i];
-  }
-  return sum / arguments.length;
-};
+// similar to the following anonymous, implicitly-returned arrow-function:
+const add = (x, y) => (
+  x + y
+)
+add(2, 3)
 
 
 // Simplest form of React:
@@ -87,24 +82,3 @@ class Welcome extends React.Component {
     return <h1>Hello, {this.props.name}</h1>;
   }
 }
-
-
-// Composing Components
-function Welcome(props) {
-  return <h1>Hello, {props.name}</h1>;
-}
-
-function App() {
-  return (
-    <div>
-      <Welcome name="Sara" />
-      <Welcome name="Cahal" />
-      <Welcome name="Edite" />
-    </div>
-  );
-}
-
-ReactDOM.render(
-  <App />,
-  document.getElementById('root')
-);

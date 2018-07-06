@@ -1,6 +1,6 @@
 // Import React
 import React from "react";
-import IconArrowDownward from "mineral-ui-icons/IconArrowDownward";
+import IconRepeat from "mineral-ui-icons/IconRepeat";
 import Flex, { FlexItem } from "mineral-ui/Flex";
 import { createStyledComponent } from "mineral-ui/styles";
 import _Text from "mineral-ui/Text";
@@ -141,6 +141,12 @@ export default class Presentation extends React.Component {
     return (
       <Deck contentWidth="80vw" transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
         <Slide align="flex-start" transition={["zoom"]} bgColor="primary">
+          <Notes>
+            No need for laptops... yet<br /><br />
+            A little about me - Turing, cab, gardening, photography<br /><br />
+            Let me know if I'm not loud enough or going too fast or slow or whether I'm missing something/you have something to share- cooperative learning experience<br /><br />
+            We'll try to take pomodorro breaks every 25 min; keep me honest<br /><br />
+          </Notes>
           <Flex direction="column" justifyContent="between" height="75vh" marginTop="18vh" marginBottom="7vh">
             <FlexItem>
               <Flex justifyContent="center">
@@ -153,6 +159,9 @@ export default class Presentation extends React.Component {
               </Heading>
               <Text margin="10px 0 0" textColor="secondary" textSize="4rem" bold>
                 2018 ASE Training
+              </Text>
+              <Text margin="10px 0 0" textColor="secondary" textSize="3rem" bold>
+                Victoria Vasys | UI Dev | github...linkedin...twitter @victoriavasys
               </Text>
             </FlexItem>
             <FlexItem>
@@ -168,36 +177,6 @@ export default class Presentation extends React.Component {
             </FlexItem>
           </Flex>
         </Slide>
-        {/* <Slide transition={["fade"]} bgColor="tertiary">
-          <Heading size={6} textColor="secondary" caps>Typography</Heading>
-          <Heading size={1} textColor="secondary">Heading 1</Heading>
-          <Heading size={2} textColor="secondary">Heading 2</Heading>
-          <Heading size={3} textColor="secondary">Heading 3</Heading>
-          <Heading size={4} textColor="secondary">Heading 4</Heading>
-          <Heading size={5} textColor="secondary">Heading 5</Heading>
-          <Text size={6} textColor="secondary">Standard text</Text>
-        </Slide> */}
-        {/* <Slide align="flex-start" transition={["fade"]} bgColor="primary" textColor="secondary">
-          <Flex>
-            <FlexItem marginTop={100}>
-              <Heading size={6} textColor="tertiary">Mineral UI User Interface</Heading>
-            </FlexItem>
-          </Flex>
-          <Flex direction="column" height="80vh" justifyContent="center">
-            <FlexItem>
-              <Text margin="10px 0 0" textColor="secondary" textSize="3em" textAlign="left">
-            Mineral UI is a library of React components that are easily consumable, reflect the intent of the style guide, and increase the speed of development.
-              </Text>
-            </FlexItem>
-            <FlexItem>
-              <List textColor="secondary">
-                <ListItem>Zero compromise with faster and higher quality code</ListItem>
-                <ListItem>Work on things that matter instead of repetitive UI.</ListItem>
-                <ListItem>Consistency becomes a by-product, not a mandate</ListItem>
-              </List>
-            </FlexItem>
-          </Flex>
-        </Slide> */}
         <Slide align="flex-start" transition={["zoom"]} bgColor="primary">
           <Flex direction="column" justifyContent="between" height="95vh">
             <FlexItem marginTop="10vh" marginBottom="-11vh">
@@ -229,9 +208,9 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide align="flex-start" transition={["zoom"]} bgColor="primary">
           <Notes>
-            Allows the company to be unified in its design vision; consistency becomes a by-product, not a mandate
-            Provides an avenue for quick & efficient changes (new products too); built for re-use at scale
-            Developers are free to focus on other important things
+            * Allows the company to be unified in its design vision; consistency becomes a by-product, not a mandate; STYLE GUIDE + Comp lib<br /><br />
+            * Provides an avenue for quick & efficient changes (new products too); built for re-use at scale<br /><br />
+            * Developers are free to focus on other important things
           </Notes>
           <Flex direction="column" justifyContent="between" height="95vh">
             <FlexItem marginTop="10vh" marginBottom="-11vh">
@@ -281,12 +260,12 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide align="flex-start" transition={["zoom"]} bgColor="primary">
           <Notes>
-            Is "Product Teams v Contractor" piece important here?
-            User Research: Interviews and behavior analysis
-            Info Architecture: Structure design and content organization
-            Interaction Design: Research and user/product workflows
-            Visual Design: Visual layout and information design
-            Prototyping: Build/test product workflows and concept designs
+            Is "Product Teams v Contractor" piece important here?<br /><br />
+            User Research: Interviews and behavior analysis<br /><br />
+            Info Architecture: Structure design and content organization<br /><br />
+            Interaction Design: Research and user/product workflows<br /><br />
+            Visual Design: Visual layout and information design<br /><br />
+            Prototyping: Build/test product workflows and concept designs<br /><br />
             Front-end dev: Implement complete interaction and visual designs into product
           </Notes>
           <Flex direction="column" justifyContent="between" height="95vh">
@@ -295,15 +274,15 @@ export default class Presentation extends React.Component {
             </FlexItem>
             <FlexItem>
               <Text textColor="secondary" textSize="4.5rem">User Research</Text>
-              <IconArrowDownward color={colors.secondary} size="4.5rem" />
+              <IconRepeat color={colors.secondary} size="4.5rem" />
               <Text textColor="secondary" textSize="4.5rem">Information Architecture</Text>
-              <IconArrowDownward color={colors.secondary} size="4.5rem" />
+              <IconRepeat color={colors.secondary} size="4.5rem" />
               <Text textColor="secondary" textSize="4.5rem">Interaction Design</Text>
-              <IconArrowDownward color={colors.secondary} size="4.5rem" />
+              <IconRepeat color={colors.secondary} size="4.5rem" />
               <Text textColor="secondary" textSize="4.5rem">Visual Design</Text>
-              <IconArrowDownward color={colors.secondary} size="4.5rem" />
+              <IconRepeat color={colors.secondary} size="4.5rem" />
               <Text textColor="secondary" textSize="4.5rem">Prototyping</Text>
-              <IconArrowDownward color={colors.secondary} size="4.5rem" />
+              <IconRepeat color={colors.secondary} size="4.5rem" />
               <Text textColor="secondary" textSize="4.5rem">Front-End Dev</Text>
             </FlexItem>
             <FlexItem alignSelf="center" justifyContent="center" marginBottom="1vh" marginTop="-1vh">
@@ -319,10 +298,10 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide align="flex-start" transition={["zoom"]} bgColor="primary">
           <Notes>
-            ‘Owns’ the overall practice of user experience at CA.
-            Supplies tools/techniques/best practices to enable individual groups to design quicker and more efficiently.
-            Provides the processes to ensure UX is part of CA’s overall workflows & initiatives.
-            Is the communications “glue” to keep teams coordinated and talking.
+            ‘Owns’ the overall practice of user experience at CA.<br /><br />
+            Supplies tools/techniques/best practices to enable individual groups to design quicker and more efficiently.<br /><br />
+            Provides the processes to ensure UX is part of CA’s overall workflows & initiatives.<br /><br />
+            Is the communications “glue” to keep teams coordinated and talking.<br /><br />
           </Notes>
           <Flex direction="column" justifyContent="between" height="95vh">
             <FlexItem marginTop="10vh" marginBottom="-11vh">
@@ -347,8 +326,17 @@ export default class Presentation extends React.Component {
           </Flex>
         </Slide>
         <Slide align="flex-start" transition={["zoom"]} bgColor="primary">
+          <Notes>
+            10 Min<br />
+            I will ask for 3 volunteers to list or draw what they came up with; otherwise voluntold<br /><br />
+            CHECK OUT BUTTON <br /><br />
+            pixel-perfect styles- border radius, focus/hover/active states <br /><br />
+            handling actions<br /><br />
+            aria-labels for icon-only for screen readers<br /><br />
+            how will it be used? different types, etc.; which attributes to pass to the DOM
+          </Notes>
           <Flex direction="column" alignItems="center" justifyContent="between" height="90vh" marginBottom="10vh">
-            <FlexItem marginTop="10vh" marginBottom="-11vh">
+            <FlexItem marginTop="10vh" marginBottom="-5vh">
               <Heading textColor="tertiary" width="2000px">Exercise time!</Heading>
             </FlexItem>
             <FlexItem>
@@ -360,7 +348,7 @@ export default class Presentation extends React.Component {
               <br/>
               <Text textColor="secondary" textSize="4rem" width="20vw"><MineralText>Your task</MineralText>: Pair & develop a button</Text>
             </FlexItem>
-            <FlexItem alignSelf="center" justifyContent="center" marginBottom="1vh" marginTop="-1vh">
+            <FlexItem alignSelf="center" justifyContent="center" marginBottom="-3vh" marginTop="3vh">
               <MineralTextFooter
                 appearance="prose"
                 element="span"
@@ -373,34 +361,84 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide align="flex-start" transition={["zoom"]} bgColor="primary">
           <Notes>
-            Encapsulation - implements and advocates for the CA Style Guide, making components automatically on-brand & drop-in-ready
-            Performance - modern apps
-            Flexibility - we don't have opinions on everything, so we offer room for devs who have additional needs: composition (wrap anything in a Tooltip or Popover), formfield labels (can be text or React component), render props (power & value- search!)
-            Accessibility (a11y) - Considers color to keyboard navigation to screen readers and beyond
-            Responsiveness - quick & simple to add breakpoints
-            Browser Support
-            Open Source - Increases marketability in the industry
+            Encapsulation - implements and advocates for the CA Style Guide, making components automatically on-brand & drop-in-ready<br /><br />
+            Performance - modern apps<br /><br />
+            Flexibility - we don't have opinions on everything, so we offer room for devs who have additional needs: composition (wrap anything in a Tooltip or Popover), formfield labels (can be text or React component), render props (power & value- search!)<br /><br />
+            a11y - Considers color to keyboard navigation to screen readers and beyond<br /><br />
+            i18n - rtl languages (future = date/time, etc.)<br /><br />
+            Responsiveness - quick & simple to add breakpoints<br /><br />
+            Browser Support - account for ie, edge<br /><br />
+            Open Source - Increases marketability in the industry<br /><br /><br />
+            It's clear there's a lot to think about! free your braaaaain<br /><br />
           </Notes>
           <Flex direction="column" justifyContent="between" height="95vh">
             <FlexItem marginTop="10vh">
               <Heading size={1} textColor="tertiary" width="2000px">What are some Mineral-UI-specific advantages?</Heading>
             </FlexItem>
             <FlexItem>
-              <Text textColor="secondary" textSize="4.5rem">Encapsulation</Text>
+              <Anim
+                fromStyle={{ opacity: 0 }}
+                toStyle={[{ opacity: 1 }, { opacity: 0.2 }]}
+                transitionDuration={300}
+              >
+                <Text textColor="secondary" textSize="4.5rem">Encapsulation</Text>
+              </Anim>
               <br />
-              <Text textColor="secondary" textSize="4.5rem">Performance</Text>
+              <Anim
+                fromStyle={{ opacity: 0 }}
+                toStyle={[{ opacity: 1 }, { opacity: 0.2 }]}
+                transitionDuration={300}
+              >
+                <Text textColor="secondary" textSize="4.5rem">Performance</Text>
+              </Anim>
               <br />
-              <Text textColor="secondary" textSize="4.5rem">Flexibility</Text>
+              <Anim
+                fromStyle={{ opacity: 0 }}
+                toStyle={[{ opacity: 1 }, { opacity: 0.2 }]}
+                transitionDuration={300}
+              >
+                <Text textColor="secondary" textSize="4.5rem">Flexibility</Text>
+              </Anim>
               <br />
-              <Text textColor="secondary" textSize="4.5rem">Accessibility (a11y)</Text>
+              <Anim
+                fromStyle={{ opacity: 0 }}
+                toStyle={[{ opacity: 1 }, { opacity: 0.2 }]}
+                transitionDuration={300}
+              >
+                <Text textColor="secondary" textSize="4.5rem">Accessibility (a11y)</Text>
+              </Anim>
               <br />
-              <Text textColor="secondary" textSize="4.5rem">Internationalization (i18n)</Text>
+              <Anim
+                fromStyle={{ opacity: 0 }}
+                toStyle={[{ opacity: 1 }, { opacity: 0.2 }]}
+                transitionDuration={300}
+              >
+                <Text textColor="secondary" textSize="4.5rem">Internationalization (i18n)</Text>
+              </Anim>
               <br />
-              <Text textColor="secondary" textSize="4.5rem">Responsiveness</Text>
+              <Anim
+                fromStyle={{ opacity: 0 }}
+                toStyle={[{ opacity: 1 }, { opacity: 0.2 }]}
+                transitionDuration={300}
+              >
+                <Text textColor="secondary" textSize="4.5rem">Responsiveness</Text>
+              </Anim>
               <br />
-              <Text textColor="secondary" textSize="4.5rem">Browser Support</Text>
+              <Anim
+                fromStyle={{ opacity: 0 }}
+                toStyle={[{ opacity: 1 }, { opacity: 0.2 }]}
+                transitionDuration={300}
+              >
+                <Text textColor="secondary" textSize="4.5rem">Browser Support</Text>
+              </Anim>
               <br />
-              <Text textColor="secondary" textSize="4.5rem">Open Source</Text>
+              <Anim
+                fromStyle={{ opacity: 0 }}
+                toStyle={[{ opacity: 1 }]}
+                transitionDuration={300}
+              >
+                <Text textColor="secondary" textSize="4.5rem">Open Source</Text>
+              </Anim>
             </FlexItem>
             <FlexItem alignSelf="center" justifyContent="center" marginBottom="1vh" marginTop="-1vh">
               <MineralTextFooter
@@ -415,16 +453,19 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide align="flex-start" transition={["slide"]} bgColor="penitentiary" notes="">
           <Notes>
-            Go to ETHERPAD
-            Who all has seen javascript?
-            Who's written it?
-            Who's used React?
-            ES = created to standardize JavaScript
+            Go to EtherPad: links (this slide deck), sharing code (https://codesandbox.io) <br /><br />
+            Who all has written in javascript?<br />
+            Who's used React?<br /><br />
+            ES = created to standardize JavaScript<br /><br />
+            props is simply an object<br /><br />
+            DRAW A REACT TREE; App -> Section -> Form<br /><br />
+            functional v class components: render!<br /><br />
+            Adjacent XJS elements must be wrapped in an enclosing tag (Fragments)<br /><br />
           </Notes>
           <Flex direction="column" justifyContent="between" height="95vh">
             <FlexItem marginTop="10vh" marginBottom="-11vh">
               <Heading size={1} textColor="secondary" width="2000px">A little intro to JS & React</Heading>
-              <Text textSize="3rem">https://etherpad.net/p/mineral-ui</Text>
+              <Text textColor="secondary" textSize="3rem">https://etherpad.net/p/mineral-ui</Text>
             </FlexItem>
             <FlexItem marginBottom="-9vh">
               <CodePane height="60vh" lang="jsx" overflow="scroll" source={require("raw-loader!../assets/react/code-js")} textSize="2.5rem"/>
@@ -446,7 +487,7 @@ export default class Presentation extends React.Component {
           </Notes>
           <Flex direction="column" justifyContent="between" height="95vh">
             <FlexItem marginTop="10vh" marginBottom="-11vh">
-              <Heading size={1} textColor="secondary" width="2000px">A little intro to JS & React</Heading>
+              <Heading size={1} textColor="secondary" width="2000px">Composing React Components</Heading>
               <Text textSize="3rem">https://etherpad.net/p/mineral-ui</Text>
             </FlexItem>
             <FlexItem marginBottom="-9vh">
@@ -465,10 +506,10 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide align="flex-start" transition={["zoom"]} bgColor="primary">
           <Notes>
-            A good rule of thumb for priority when making changes:
-            1. Always best to use a component as-is for consistency's sake
-            2. Next, you can reach for theming (from your entire app to a specific component)
-            3. Lastly, you can style components using CSS-in-JS
+            A good rule of thumb for priority when making changes:<br />
+            1. Always best to use a component as-is for consistency's sake<br />
+            2. Next, you can reach for theming (from your entire app to a specific component)<br />
+            3. Lastly, you can style components using CSS-in-JS<br />
           </Notes>
           <Flex direction="column" justifyContent="between" height="95vh">
             <FlexItem marginTop="10vh" marginBottom="-11vh">
@@ -605,6 +646,12 @@ export default class Presentation extends React.Component {
           </Flex>
         </Slide>
         <Slide align="flex-start" transition={["slide", "zoom"]} bgColor="primary">
+          <Notes>
+            Options: explore using other inputs like checkbox & select<br />
+            Options: try to implement an accessible search field using render props with select<br />
+            Options: attempt to implement a custom color palette<br />
+            Options: make a stateful `Form` that controls FormFields & the button actually does something<br />
+          </Notes>
           <Flex direction="column" justifyContent="between" height="95vh">
             <FlexItem marginTop="10vh" marginBottom="-11vh">
               <Heading size={1} textColor="tertiary" width="2000px">Exercise time again :D</Heading>
@@ -616,6 +663,11 @@ export default class Presentation extends React.Component {
               <br />
               <Text textColor="secondary" textSize="4.5rem">One component together</Text>
               <Text textColor="secondary" textSize="4.5rem"><MineralText>30 minutes</MineralText> to propagate & explore</Text>
+              <br />
+              <Text textColor="secondary" textSize="3rem">Add other inputs like checkbox & select</Text>
+              <Text textColor="secondary" textSize="3rem">Select accessible search field using render props</Text>
+              <Text textColor="secondary" textSize="3rem">Implement a custom color palette</Text>
+              <Text textColor="secondary" textSize="3rem">Make a stateful `Form`</Text>
             </FlexItem>
             <FlexItem alignSelf="center" justifyContent="center" marginBottom="1vh" marginTop="-1vh">
               <MineralTextFooter
@@ -733,6 +785,7 @@ export default class Presentation extends React.Component {
               <Text textColor="secondary" textSize="4.5rem"><MineralText>Victoria Vasys</MineralText></Text>
               <Text textColor="secondary" textSize="3.5rem">Mineral UI Developer</Text>
               <Text textColor="secondary" textSize="3.5rem">victoria.vasys@ca.com</Text>
+              <Text textColor="secondary" textSize="3.5rem">@victoriavasys</Text>
             </FlexItem>
           </Flex>
         </Slide>
